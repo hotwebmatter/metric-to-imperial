@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace metric_to_imperal
 {
@@ -6,7 +7,7 @@ namespace metric_to_imperal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            WriteLine("Hello World!");
         }
     }
 }
