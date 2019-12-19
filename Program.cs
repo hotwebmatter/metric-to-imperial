@@ -13,7 +13,7 @@ namespace metric_to_imperial
                    inches;
         static void Main(string[] args)
         {
-            ReadInt("How many meters?");
+            ReadDouble("How many meters?");
             WriteLine("Hello World!");
         }
         static double ReadDouble(string label)
@@ -28,5 +28,6 @@ namespace metric_to_imperial
             }
             return number;
         }
+
     }
 }
