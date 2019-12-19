@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace metric_to_imperal
+namespace metric_to_imperial
 {
     class Program
     {
