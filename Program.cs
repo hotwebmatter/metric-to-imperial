@@ -13,8 +13,10 @@ namespace metric_to_imperial
                    inches;
         static void Main(string[] args)
         {
-            ReadDouble("How many meters?");
-            WriteLine("Hello World!");
+            meters = ReadDouble("How many meters?");
+            totalInches = (int)MetersToInches(meters);
+            InchesToFeet();
+            WriteLine(FormatOutput());
         }
         static double ReadDouble(string label)
         {
@@ -28,6 +30,24 @@ namespace metric_to_imperial
             }
             return number;
         }
-
+        static double MetersToInches(double m)
+        {
+            return m * (1 / 0.0254);
+        }
+        static void InchesToFeet()
+        {
+            feet = totalInches / 12;
+            inches = totalInches % 12;
+        }
+        static string FormatOutput()
+        {
+            string result = String.Format("****** Metric to Imperial ******\n");
+            result += String.Format("* {0, 15} {1, 12:N} *\n", "Meters:", meters);
+            result += String.Format("* {0, 15} {1, 12:N0} *\n", "Total Inches:", totalInches);
+            result += String.Format("* {0, 15} {1, 12:N0} *\n", "Feet:", feet);
+            result += String.Format("* {0, 15} {1, 12:N0} *\n", "Inches:", inches);
+            result += String.Format("********************************\n");
+            return result;
+        }
     }
 }
